@@ -24,8 +24,8 @@ public class OrderMaster {
     @Column(name = "CUSTOMER_ID", nullable = false)
     private Long customerId;
 
-//    @OneToMany(mappedBy = "orderMaster", cascade = CascadeType.ALL, orphanRemoval = true)
-//    private List<OrderDetails> orderDetails;
+    @OneToMany(mappedBy = "orderMaster", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<OrderDetails> orderDetails;
 
     @Column(name = "ORDER_DATE", nullable = false)
     private Date orderDate;
