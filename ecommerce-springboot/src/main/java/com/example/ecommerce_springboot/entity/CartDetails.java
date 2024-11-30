@@ -43,5 +43,7 @@ public class CartDetails {
     @Column(name = "RATING")
     private double rating;
 
+
+    
     // getters and setters (Lombok @Data provides these)
 }
