@@ -19,7 +19,7 @@ public class Product {
     @Column(name = "PRICE", nullable = false)
     private Double price;
 
-    @Column(name = "DESCRIPTION", columnDefinition = "TEXT")
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @Column(name = "CATEGORY", nullable = false)

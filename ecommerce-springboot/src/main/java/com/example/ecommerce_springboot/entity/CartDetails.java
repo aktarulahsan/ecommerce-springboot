@@ -16,6 +16,7 @@ public class CartDetails {
     @JoinColumn(name = "CART_ID")
     private CartItem cartItem;
 
+
     @Column(name = "TITLE")
     private String title;
 
@@ -31,7 +32,7 @@ public class CartDetails {
     @Column(name = "SUBTOTAL")
     private double subtotal;
 
-    @Column(name = "DESCRIPTION", columnDefinition = "TEXT")
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @Column(name = "CATEGORY")
@@ -44,6 +45,6 @@ public class CartDetails {
     private double rating;
 
 
-    
+
     // getters and setters (Lombok @Data provides these)
 }

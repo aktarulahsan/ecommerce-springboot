@@ -1,5 +1,6 @@
 package com.example.ecommerce_springboot.service;
 
+import com.example.ecommerce_springboot.entity.OrderDetails;
 import com.example.ecommerce_springboot.entity.OrderMaster;
 import com.example.ecommerce_springboot.repo.OrderMasterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class OrderMasterServiceImpl implements OrderMasterService {
 
     @Override
     public OrderMaster addOrderMaster(OrderMaster orderMaster) {
+        for (OrderDetails details : orderMaster.getOrderDetails()) {
+            details.setOrderMaster(orderMaster);
+        }
         return orderMasterRepository.save(orderMaster);
     }
 

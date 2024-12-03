@@ -24,8 +24,17 @@ public class OrderMaster {
     @Column(name = "CUSTOMER_ID", nullable = false)
     private Long customerId;
 
+//    @OneToMany(mappedBy = "orderMaster", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<OrderDetails> orderDetails;
+
+
+//    @OneToMany(mappedBy = "orderMaster", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<OrderDetails> orderDetails;
+
     @OneToMany(mappedBy = "orderMaster", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderDetails> orderDetails;
+
+
 
     @Column(name = "ORDER_DATE", nullable = false)
     private Date orderDate;
@@ -36,10 +45,10 @@ public class OrderMaster {
     @Column(name = "TOTAL_AMOUNT", nullable = false)
     private double totalAmount;
 
-    @Column(name = "PAYMENT_INFO", columnDefinition = "TEXT", nullable = false)
+    @Column(name = "PAYMENT_INFO", nullable = false)
     private String paymentInfo;
 
-    @Column(name = "DELIVERY_INFO", columnDefinition = "TEXT", nullable = false)
+    @Column(name = "DELIVERY_INFO", nullable = false)
     private String deliveryInfo;
 
     @Column(name = "DELIVERY_DATE")

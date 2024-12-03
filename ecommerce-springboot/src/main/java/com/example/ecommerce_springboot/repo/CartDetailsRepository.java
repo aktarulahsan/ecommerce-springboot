@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface CartDetailsRepository extends JpaRepository<CartDetails, Long> {
-  //  List<CartDetails> findByCartId(Long cartId); // Custom query to find all CartDetails by Cart ID
+//    List<CartDetails> findByCartId(Long cartId); // Custom query to find all CartDetails by Cart ID
 }
 

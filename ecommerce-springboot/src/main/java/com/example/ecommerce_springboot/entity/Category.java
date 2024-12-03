@@ -20,7 +20,7 @@ public class Category {
     @Column(name = "NAME", nullable = false)
     private String name;
 
-    @Column(name = "DESCRIPTION", columnDefinition = "TEXT")
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @Column(name = "IMAGE_URL", nullable = true)
