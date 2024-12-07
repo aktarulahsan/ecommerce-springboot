@@ -1,5 +1,6 @@
 package com.example.ecommerce_springboot.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -26,11 +27,14 @@ public class OrderDetails {
 //    @JsonIgnore
 //    private OrderMaster orderMaster;
 
+//    @ManyToOne
+//    @JoinColumn(name = "ORDER_ID", nullable = false)
+//    private OrderMaster orderMaster;
+
     @ManyToOne
-    @JoinColumn(name = "ORDER_ID", nullable = false)
+    @JoinColumn(name = "order_id", nullable = false)
+    @JsonBackReference
     private OrderMaster orderMaster;
-
-
 
 
     @Column(name = "PRODUCT_ID", nullable = false)

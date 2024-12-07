@@ -28,9 +28,9 @@ public class ProductController {
     // Update an existing product
     @PutMapping("/{update}")
     public ResponseEntity<Product> updateProduct(
-            @PathVariable Long productId,
+//            @PathVariable Long productId,
             @RequestBody Product product) {
-        Product updatedProduct = productService.updateProduct(productId, product);
+        Product updatedProduct = productService.updateProduct(product.getProductId(), product);
         return ResponseEntity.ok(updatedProduct);
     }
 

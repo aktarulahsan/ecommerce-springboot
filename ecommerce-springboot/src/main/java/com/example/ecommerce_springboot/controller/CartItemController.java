@@ -1,5 +1,6 @@
 package com.example.ecommerce_springboot.controller;
 
+import com.example.ecommerce_springboot.dto.CartItemDTO;
 import com.example.ecommerce_springboot.entity.CartItem;
 import com.example.ecommerce_springboot.entity.Category;
 import com.example.ecommerce_springboot.service.CartItemService;
@@ -39,15 +40,15 @@ public class CartItemController {
 
     // Get a category by ID
     @GetMapping("/{getFindById}")
-    public ResponseEntity<CartItem> getCategoryById(@PathVariable Long id) {
-        CartItem model = service.getCartItemById(id);
+    public ResponseEntity<CartItemDTO> getCategoryById(@PathVariable Long id) {
+        CartItemDTO model = service.getCartItemById(id);
         return ResponseEntity.ok(model);
     }
 
     // Get all categories
     @GetMapping("/list")
-    public ResponseEntity<List<CartItem>> getAllCategories() {
-        List<CartItem> list = service.getAllCartItems();
+    public ResponseEntity<List<CartItemDTO>> getAllCategories() {
+        List<CartItemDTO> list = service.getAllCartItems();
         return ResponseEntity.ok(list);
     }
 
